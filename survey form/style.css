@@ -1,0 +1,61 @@
+:root {
+  --white: #ffffff;
+  --off-white: #e5e5e5;
+  --transp-white-1: rgba(255, 255, 255, 0.25);
+  --transp-white-2: rgba(255, 255, 255, 0.1);
+  --blue-1: #8e62f5;
+  --blue-2: #b944ef;
+  --shadow: rgba(3, 46, 87, 0.2);
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(135deg, var(--blue-1), var(--blue-2));
+}
+
+#survey-form {
+  width: 80vmin;
+  background: var(--transp-white-2);
+  backdrop-filter: blur(10px);
+  padding: 3em 1.8em;
+  border: 2px solid var(--transp-white-2);
+  border-radius: 0.6em;
+  box-shadow: 0 1.8em 3.7em var(--shadow);
+}
+label, p{
+  font-size: large;
+  font-weight: 500; 
+  margin-top: 2rem;
+}
+input, textarea, #dropdown{
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+  padding:  0.5rem 1rem;
+  outline: none;
+  border: none;
+}
+.options input{
+  display: inline;
+  width: 50px;
+}
+
+textarea{
+  min-height: 150px;
+  resize: vertical;
+  padding: 1rem ;
+}
+
+#submit{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 4px 2px;
+  cursor: pointer;
+}
