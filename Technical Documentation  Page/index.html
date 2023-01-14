@@ -1,0 +1,334 @@
+<!DOCTYPE html>v-link
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Technical Documentaion Page</title>
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+
+    <!-- style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav id="navbar" class="topnav">
+        <div class="nav-header">
+            <header>Sass Documentation</header>
+            <button class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <ul id="myLinks" class="links">
+            <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+            <li><a href="#What_you_should_already_know" class="nav-link">What you should already know</a></li>
+            <li><a href="#Sass_Installation" class="nav-link">Sass Installation</a></li>
+            <li><a href="#Sass_Variables" class="nav-link">Sass Variables</a></li>
+            <li><a href="#Sass_@import" class="nav-link">Sass @import</a></li>
+            <li><a href="#Sass_@extend_and_Inheritance" class="nav-link">Sass @extend and Inheritance</a></li>
+            <li><a href="#Reference" class="nav-link">Reference</a></li>
+        </ul>
+
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <article>
+                <p> Sass is a stylesheet language that&#39;s compiled to CSS. It allows you to use variables, nested
+                    rules,
+                    mixins, functions, and more, all with a fully CSS-compatible syntax. Sass helps keep large
+                    stylesheets well-organized and makes it easy to share design within and across projects.
+                </p>
+                <h3>What is Sass?</h3>
+                <ul>
+                    <li> Sass is an extension to CSS</li>
+                    <li> Sass is completely compatible with all versions of CSS</li>
+                    <li> Sass reduces repetition of CSS and therefore saves time</li>
+                    <li> Sass stands for Syntactically Awesome Stylesheet</li>
+                    <li> Sass was designed by Hampton Catlin and developed by Natalie Weizenbaum in 2006</li>
+                    <li> Sass is a CSS pre-processor</li>
+                    <li> Sass is free to download and use</li>
+                </ul>
+
+                <h3>Why Use Sass?</h3>
+                <p>Stylesheets are getting larger, more complex, and harder to maintain. This is where a CSS
+                    pre-processor can help.<br>
+                    Sass lets you use features that do not exist in CSS, like variables, nested rules, mixins,
+                    imports, inheritance, built-in functions, and other stuff.
+                </p>
+            </article>
+        </section>
+
+        <section class="main-section" id="What_you_should_already_know">
+            <header>What you should already know</header>
+            <article>
+                <p>Before you continue you should have a basic understanding of the following:</p>
+                <ul>
+                    <li>Good working knowledge of HyperText Markup Language (HTML).</li>
+                    <li>CSS</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="main-section" id="Sass_Installation">
+            <header>Sass Installation</header>
+            <article>
+                <h3>System Requirements for Sass</h3>
+                <ul>
+
+                    <li>Operating system - Sass is platform independent</li>
+                    <li>Browser support - Sass works in Edge/IE (from IE 8), Firefox, Chrome, Safari, Opera</li>
+                    <li>Programming language - Sass is based on Ruby</li>
+                </ul>
+
+                <h3>Official Sass Web Site</h3>
+                <p>Read more about Sass at the official Sass web site: https://sass-lang.com/</p>
+
+                <h3>Install Sass</h3>
+                <p>There are several ways to install Sass in your system. There are many applications that will get you
+                    up and running with Sass in a few minutes for Mac, Windows, and Linux. Some of these are free, but
+                    some are paid apps.</p>
+
+                <p>You can read more about them here: sass-lang.com/install</p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Sass_Variables">
+            <header>Sass Variables</header>
+            <article>
+                <p>Variables are a way to store information that you can re-use later.</p>
+
+                <p>With Sass, you can store information in variables, like:</p>
+
+                <ul>
+                    <li>strings</li>
+                    <li>numbers</li>
+                    <li>colors</li>
+                    <li>booleans</li>
+                    <li>lists</li>
+                    <li>nulls</li>
+                </ul>
+
+
+                <p>Sass uses the $ symbol, followed by a name, to declare variables:</p>
+                <code>
+                    <p>Sass Variable Syntax:</p>
+                    $variablename: value;
+                </code>
+                <p>The following example declares 4 variables named myFont, myColor, myFontSize, and myWidth. After the
+                    variables are declared, you can use the variables wherever you want:</p>
+                <code>
+                    <p>SCSS Syntax:</p>
+                    $myFont: Helvetica, sans-serif;
+                    $myColor: red;
+                    $myFontSize: 18px;
+                    $myWidth: 680px;
+
+                    body {
+                    font-family: $myFont;
+                    font-size: $myFontSize;
+                    color: $myColor;
+                    }
+
+                    #container {
+                    width: $myWidth;
+                    }
+                </code>
+                <p>So, when the Sass file is transpiled, it takes the variables (myFont, myColor, etc.) and outputs
+                    normal CSS with the variable values placed in the CSS, like this:</p>
+                <code>
+                    <p>CSS Output:</p>
+                    body {
+                    font-family: Helvetica, sans-serif;
+                    font-size: 18px;
+                    color: red;
+                    }
+                    #container {
+                    width: 680px;
+                    }
+                </code>
+                <h3>Sass Variable Scope</h3>
+                <p> Sass variables are only available at the level of nesting where they are defined.</p>
+
+            </article>
+        </section>
+
+        <section class="main-section" id="Sass_@import">
+            <header>Sass @import</header>
+            <article>
+                <p>Sass keeps the CSS code DRY (Don't Repeat Yourself). One way to write DRY code is to keep related
+                    code in separate files.
+                </p>
+                <p>You can create small files with CSS snippets to include in other Sass files. Examples of such files
+                    can be: reset file, variables, colors, fonts, font-sizes, etc. </p>
+                <h3>Sass Importing Files</h3>
+                <p>Just like CSS, Sass also supports the @import directive.</p>
+
+                <p> The @import directive allows you to include the content of one file in another.</p>
+
+                <p>The CSS @import directive has a major drawback due to performance issues; it creates an extra HTTP
+                    request each time you call it. However, the Sass @import directive includes the file in the CSS; so
+                    no extra HTTP call is required at runtime!</p>
+
+                <code>
+                    <p>Sass Import Syntax:</p>
+                    @import filename;
+                </code>
+                <p>Tip: You do not need to specify a file extension, Sass automatically assumes that you mean a .sass or
+                    .scss file. You can also import CSS files. The @import directive imports the file and any variables
+                    or mixins defined in the imported file can then be used in the main file.</p>
+                <p>You can import as many files as you need in the main file:</p>
+
+                <code>
+                    <p>Example</p>
+                    @import "variables";
+                    @import "colors";
+                    @import "reset";
+                </code>
+                <p>Let's look at an example: Let's assume we have a reset file called "reset.scss", that looks like
+                    this:</p>
+                <code>
+                    <p>Example</p>
+                    <p>SCSS Syntax (reset.scss):</p>
+
+                    html,
+                    body,
+                    ul,
+                    ol {
+                    margin: 0;
+                    padding: 0;
+                    }
+
+                </code>
+                <p>and now we want to import the "reset.scss" file into another file called "standard.scss".
+
+                    Here is how we do it: It is normal to add the @import directive at the top of a file; this way its
+                    content will have a global scope:</p>
+
+                <code>
+                    <p>SCSS Syntax (standard.scss):</p>
+                    @import "reset";
+
+                    body {
+                    font-family: Helvetica, sans-serif;
+                    font-size: 18px;
+                    color: red;
+                    }
+                </code>
+                <p>So, when the "standard.css" file is transpiled, the CSS will look like this:</p>
+                <code>
+                    <p>CSS output:</p>
+
+                    html, body, ul, ol {
+                    margin: 0;
+                    padding: 0;
+                    }
+
+                    body {
+                    font-family: Helvetica, sans-serif;
+                    font-size: 18px;
+                    color: red;
+                    }
+                </code>
+            </article>
+        </section>
+
+        <section class="main-section" id="Sass_@extend_and_Inheritance">
+            <header>Sass @extend and Inheritance</header>
+            <article>
+                <h3>Sass @extend Directive</h3>
+                <p>The @extend directive lets you share a set of CSS properties from one selector to another.</p>
+
+                <p>The @extend directive is useful if you have almost identically styled elements that only differ in
+                    some
+                    small details.</p>
+
+                <p>The following Sass example first creates a basic style for buttons (this style will be used for most
+                    buttons). Then, we create one style for a "Report" button and one style for a "Submit" button. Both
+                    "Report" and "Submit" button inherit all the CSS properties from the .button-basic class, through
+                    the
+                    @extend directive. In addition, they have their own colors defined:</p>
+                <code>
+                    <p>SCSS Syntax:</p>
+                    .button-basic {
+                    border: none;
+                    padding: 15px 30px;
+                    text-align: center;
+                    font-size: 16px;
+                    cursor: pointer;
+                    }
+
+                    .button-report {
+                    @extend .button-basic;
+                    background-color: red;
+                    }
+
+                    .button-submit {
+                    @extend .button-basic;
+                    background-color: green;
+                    color: white;
+                    }
+                </code>
+                <p>After compilation, the CSS will look like this:</p>
+
+
+                <code>
+                    <p>CSS Output</p>
+                    .button-basic, .button-report, .button-submit {
+                    border: none;
+                    padding: 15px 30px;
+                    text-align: center;
+                    font-size: 16px;
+                    cursor: pointer;
+                    }
+
+                    .button-report {
+                    background-color: red;
+                    }
+
+                    .button-submit {
+                    background-color: green;
+                    color: white;
+                    }
+                </code>
+                <p> directive, you do not need to
+                    specify several classes for an element in your HTML code, like this: &lt;button
+                    class="button-basic button-report"&gt;Report this&lt;/button&gt;. You just need to specify
+                    .button-report to get both sets of styles.</p>
+
+                <p>The @extend directive helps keep your Sass code very DRY.</p>
+
+            </article>
+        </section>
+        <section class="main-section" id="Reference">
+            <header>Reference</header>
+            <article>
+                <ul>
+                    <li>
+                        All the documentation in this page is taken from
+                        <a href="https://www.w3schools.com/sass/default.php" target="_blank">w3schools</a>
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+
+    <script>
+        const navToggle = document.querySelector(".nav-toggle");
+        const links = document.querySelector(".links");
+        const liItems = document.querySelectorAll(".links li")
+        navToggle.addEventListener("click", function () {
+            links.classList.toggle("show-links");
+        });;
+        liItems.forEach((item) => {
+            item.addEventListener("click", function () {
+                links.classList.toggle("show-links");
+            });
+        })
+    </script>
+</body>
+
+</html>
