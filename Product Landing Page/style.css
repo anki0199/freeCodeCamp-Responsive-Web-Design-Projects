@@ -17,13 +17,7 @@ body {
   color: #ececee;
   font-size: 14px;
 }
-/* 
-header,
-#hero-section,
-main,
-footer {
-  max-width: 1440px;
-} */
+
 /*---navbar--- */
 header {
   overflow: hidden;
@@ -61,7 +55,6 @@ a {
 /* intro background image */
 #hero-section {
   position: relative;
-  padding: 10px 10px 0 10px;
   background-image: url(./images/bg-curvy-desktop.svg);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -84,14 +77,11 @@ a {
   width: 50vmax;
 }
 .description {
-  /* position: relative;
-  top: 10%; */
   width: 50vw;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /* margin-bottom: 205px; */
 }
 h1 {
   text-align: center;
@@ -172,11 +162,9 @@ main {
 }
 .details h1 {
   text-align: start;
-  /* line-height: 2.5rem; */
   width: 30vw;
 }
 .details p {
-  /* text-align: justify; */
   padding: 1rem 0;
   font-family: "Open Sans", sans-serif;
 }
@@ -270,7 +258,6 @@ form .btn {
 }
 
 /* footer */
-/* height: auto; */
 
 footer {
   padding: 200px 0 10px;
@@ -326,6 +313,7 @@ footer div {
   grid-column: 1/6;
   word-spacing: 0.2rem;
   font-size: 11px;
+  text-align: center;
 }
 .attribution a {
   display: inline;
