@@ -1,0 +1,246 @@
+@media (max-width: 1130px) {
+  /* hero section */
+  #hero-section {
+    text-align: center;
+    background: url(./images/bg-curvy-desktop.svg),
+      linear-gradient(
+        to top,
+        #181f2b 0%,
+        #181f2b 230px,
+        #1b2330 230px,
+        #1b2330 100%
+      );
+    background-position: center bottom 225px, center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    gap: 1rem;
+    padding: 2rem 1rem 10rem;
+  }
+  .description {
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+
+  .description h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  .description p {
+    line-height: 2rem;
+    width: 100%;
+    font-size: 1.3rem;
+  }
+  /* form */
+  #email-input {
+    width: 75%;
+    margin: 1rem auto;
+  }
+  form .btn {
+    margin-top: 1rem;
+    width: 60%;
+  }
+
+  /* footer */
+  footer {
+    padding: 200px 1.5rem 10px;
+    background-color: var(--footer-bg-color);
+    display: grid;
+    grid-template-columns: 200px repeat(4, 1fr);
+    grid-template-rows: repeat(5, auto);
+    row-gap: 30px;
+    justify-content: center;
+    font-family: "Open Sans", sans-serif;
+    column-gap: 3rem;
+  }
+  .social_media a {
+    margin: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /*---navbar--- */
+  header {
+    height: 100px;
+  }
+  .logo img {
+    width: 10vmax;
+  }
+  #nav-links li {
+    padding: 5px;
+  }
+
+  /* main */
+  main {
+    top: 0;
+  }
+  #features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    padding: 15vmin 3vmax;
+  }
+  .grid {
+    padding: 20px 0;
+    width: auto;
+    gap: 10px;
+  }
+  .grid p {
+    padding: 10px 0;
+    font-size: 1.15rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  /* details */
+  .details {
+    flex-direction: column;
+    padding: 1.2rem;
+    margin-top: 0rem;
+  }
+  .details div:last-child {
+    padding-top: 2rem;
+  }
+  .details div {
+    width: auto;
+    padding: 1.5rem;
+  }
+
+  .details h1 {
+    font-size: 1.5rem;
+    width: auto;
+    line-height: 3rem;
+  }
+  .details p {
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  /* team */
+  .team {
+    flex-direction: column;
+    background-position: 17.5% 6.5%;
+    padding-bottom: 0;
+  }
+  article {
+    width: 450px;
+    margin-bottom: 40px;
+    padding: 3rem;
+  }
+  /* form */
+  .form {
+    bottom: -180px;
+  }
+  form {
+    width: 85vw;
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+  }
+  form h1 {
+    font-size: 1.5rem;
+  }
+  form p {
+    padding: 1rem 0rem 2rem;
+    font-size: 1.1rem;
+  }
+
+  #email-input {
+    width: 100%;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    color: var(--white);
+    margin: 1rem auto;
+  }
+  form .btn {
+    margin-top: 1rem;
+    width: 100%;
+  }
+  /* footer */
+  footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 265px 10% 50px;
+  }
+
+  #footer_logo {
+    grid-column: none;
+    width: auto;
+  }
+
+  footer div {
+    height: auto;
+    margin-bottom: 2rem;
+  }
+
+  .social_media,
+  .attribution {
+    margin: auto;
+  }
+}
+
+/* ------------------------------ */
+@media (max-width: 550px) {
+  /* hero section */
+  #hero-section {
+    text-align: center;
+    background: url("./images/bg-curvy-mobile.svg"),
+      linear-gradient(
+        to top,
+        #181f2b 0%,
+        #181f2b 175px,
+        #1b2330 175px,
+        #1b2330 100%
+      );
+    background-position: center bottom 175px, center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    gap: 1rem;
+    padding: 2rem 2rem 3rem;
+  }
+
+  #hero-section img {
+    height: auto;
+    width: 40vmax;
+  }
+  .description {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+
+  .description h1 {
+    font-size: 1.7rem;
+    line-height: 2rem;
+  }
+  .description p {
+    line-height: normal;
+    width: 100%;
+    font-size: 1rem;
+  }
+  .team {
+    background-position: 8.5% 8.5%;
+    background-size: 40px;
+  }
+  article {
+    width: 80vw;
+    padding: 2rem 1.2rem;
+  }
+  article p {
+    text-align: start;
+    font-size: 0.8rem;
+  }
+}
