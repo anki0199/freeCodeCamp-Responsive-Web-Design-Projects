@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  height: 80px;
+  background: rgb(52, 45, 73);
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar ul {
+  display: flex;
+  list-style: none;
+}
+nav a {
+  text-decoration: none;
+  color: rgb(187, 138, 234);
+  margin-left: 5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Raleway", serif;
+}
+
+#welcome-section {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #1d0043;
+  background-image: url("./images/gradient-liquid-abstract-background/5238994.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.wel {
+  color: rgb(143, 181, 238);
+  line-height: 3rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "Raleway", serif;
+  white-space: nowrap;
+  word-spacing: 0.2rem;
+}
+#projects {
+  background-color: #1d0043;
+  padding: 5rem 2rem;
+  text-align: center;
+  color: rgb(143, 181, 238);
+}
+#projects h1 {
+  padding: 3rem 0;
+  font-weight: 400;
+  font-family: "Raleway", serif;
+}
+.project-image {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.projects-grid a {
+  text-decoration: none;
+  color: rgb(153, 157, 234);
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: "Open-Sans", sans-serif;
+}
+.projects-grid p {
+  padding: 2rem 0;
+}
+#profile {
+  background: rgb(52, 45, 73);
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+#profile-link {
+  color: white;
+  text-decoration: none;
+  margin-left: 3rem;
+  font-size: 1.5rem;
+}
+@media (max-width: 600px) {
+  nav a {
+    text-decoration: none;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+  }
+  #welcome-section {
+    margin-top: 80px;
+    height: 250px;
+    background-color: #1d0043;
+  }
+  .wel {
+    color: rgb(143, 181, 238);
+    line-height: 2rem;
+    font-size: 1rem;
+    word-spacing: 0.1rem;
+  }
+  #projects {
+    padding: 2rem;
+  }
+}
